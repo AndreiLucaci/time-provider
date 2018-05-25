@@ -2,13 +2,15 @@
 
 namespace TestDate.BLL
 {
-	public class Time : ITime
+	public class ApplicationTime : IApplicationTime
 	{
-		public Time(ITimeProvider timeProvider = null)
+		private readonly ITimeProvider _timeProvider;
+
+		public ApplicationTime(ITimeProvider timeProvider = null)
 		{
-			Now = (timeProvider ?? TimeProvider.Default).Now;
+			_timeProvider = timeProvider;
 		}
 
-		public DateTime Now { get; }
+		public DateTime Now => (_timeProvider ?? TimeProvider.Default).Now;
 	}
 }
