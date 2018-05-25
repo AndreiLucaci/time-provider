@@ -8,9 +8,9 @@ namespace TestDate.BLL
 
 		public ApplicationTime(ITimeProvider timeProvider = null)
 		{
-			_timeProvider = timeProvider;
+			_timeProvider = timeProvider ?? TimeProvider.Default;
 		}
 
-		public DateTime Now => (_timeProvider ?? TimeProvider.Default).Now;
+		public DateTime Now => _timeProvider.Now;
 	}
 }
