@@ -2,7 +2,7 @@
 
 namespace TestDate.BLL
 {
-	public interface ITime
+	public interface IApplicationTime
 	{
 		DateTime Now { get; }
 	}

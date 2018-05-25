@@ -61,9 +61,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\ITime.cs" />
+    <Compile Include="BLL\IApplicationTime.cs" />
     <Compile Include="BLL\ITimeProvider.cs" />
-    <Compile Include="BLL\Time.cs" />
+    <Compile Include="BLL\ApplicationTime.cs" />
     <Compile Include="BLL\TimeProvider.cs" />
     <Compile Include="TimeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
