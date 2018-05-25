@@ -15,7 +15,7 @@ namespace TestDate
 		{
 			_sut = new ApplicationTime();
 
-			Assert.AreEqual(_sut.Now, TimeProvider.Default.Now);
+			Assert.AreEqual(_sut.Now, ServerTimeProvider.Current.Now);
 		}
 
 		[TestMethod]
@@ -28,7 +28,7 @@ namespace TestDate
 
 			_sut = new ApplicationTime(timeProviderMoq.Object);
 
-			Assert.AreNotEqual(expectedNow, TimeProvider.Default.Now);
+			Assert.AreNotEqual(expectedNow, ServerTimeProvider.Current.Now);
 			Assert.AreEqual(expectedNow, _sut.Now);
 		}
 	}

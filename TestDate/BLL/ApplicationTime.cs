@@ -8,7 +8,7 @@ namespace TestDate.BLL
 
 		public ApplicationTime(ITimeProvider timeProvider = null)
 		{
-			_timeProvider = timeProvider ?? TimeProvider.Default;
+			_timeProvider = timeProvider ?? ServerTimeProvider.Current;
 		}
 
 		public DateTime Now => _timeProvider.Now;
