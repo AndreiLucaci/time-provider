@@ -6,7 +6,7 @@ namespace TestDate.BLL
 	{
 		public DateTime Now { get; set; }
 
-		public static ITimeProvider Default =  new TimeProvider
+		public static ITimeProvider Default = new TimeProvider
 		{
 			Now = DateTime.Now
 		};
